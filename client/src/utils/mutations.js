@@ -1,5 +1,7 @@
 import { gql } from '@apollo/client';
 
+/* This is a GraphQL mutation. It is a function that takes in an email and password and returns a token
+and user object. */
 export const LOGIN_USER = gql`
   mutation login(
     $email: String!
@@ -18,6 +20,7 @@ export const LOGIN_USER = gql`
   }
 `;
 
+/* A GraphQL mutation. */
 export const ADD_USER = gql`
   mutation addUser(
     $username: String!
@@ -48,6 +51,7 @@ export const ADD_USER = gql`
   }
 `;
 
+/* A mutation that saves a book to the database. */
 export const SAVE_BOOK = gql`
   mutation saveBook($newBook: InputBook!) {
     saveBook(newBook: $newBook) {
@@ -66,6 +70,7 @@ export const SAVE_BOOK = gql`
   }
 `;
 
+/* A mutation that removes a book from the database. */
 export const REMOVE_BOOK = gql`
   mutation removeBook($bookId: ID!) {
     removeBook(bookId: $bookId) {
